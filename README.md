@@ -5,28 +5,25 @@ API](https://api.finna.fi). The API can be used to search for records (e.g.
 books and images) in the Finna discovery service and to retrieve information
 about individual records.
 
+## Installation
+
+The easiest way to install is via pip:
+
+    pip3 install finna-client
+
 ## Dependencies
 
 The library depends on the
 [requests](http://docs.python-requests.org/en/master/#) module which is used
-for HTTP/REST access. The easiest way to install requests is via pip:
-
-    pip install requests
-
-or in some cases (e.g. Ubuntu systems with both Python 2 and 3):
-
-    pip3 install requests
+for HTTP/REST access. If you install this via pip, the dependencies will be
+handled automatically.
 
 ## How to use
 
 The client library comes with examples demonstrating its usage. You can invoke
 the example simply by running the [finna_client.py](finna_client.py) script.
 
-You can install the finna_client module globally like this:
-
-    python3 setup.py install
-
-In your own code, you can then import the FinnaClient class like this:
+In your own code, you can use the FinnaClient class like this:
 
     from finna_client import FinnaClient
 
