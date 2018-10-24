@@ -7,12 +7,22 @@ def read(fname):
 
 
 setup(
-    name='finna_client',
-    version='0.1',
+    name='finna-client',
+    version='0.1.0',
     url='https://github.com/NatLibFi/Finna-client',
     author='Osma Suominen',
     author_email='osma.suominen@helsinki.fi',
     description='Python client library for accessing Finna REST API',
     long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     py_modules=['finna_client'],
-    install_requires=['requests'])
+    install_requires=['requests'],
+    extras_require={
+        'dev': ['bumpversion']
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+    ]
+)
