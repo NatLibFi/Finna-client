@@ -8,7 +8,7 @@ def read(fname):
 
 setup(
     name='finna-client',
-    version='0.1.1',
+    version='0.1.2',
     url='https://github.com/NatLibFi/Finna-client',
     author='Osma Suominen',
     author_email='osma.suominen@helsinki.fi',
