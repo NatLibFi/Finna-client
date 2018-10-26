@@ -76,7 +76,7 @@ class FinnaClient:
 
     def search(self, lookfor="", search_type=FinnaSearchType.AllFields,
         fields=None, filters=None, facets=None, facetFilters=None, sort=None,
-        page=None, limit=None, lng=None):
+        page=None, limit=None, lng=None, other=None):
         """Perform a Finna search and return the search results."""
         
         if not isinstance(search_type, FinnaSearchType):
@@ -102,6 +102,8 @@ class FinnaClient:
             if not isinstance(lng, FinnaLanguage):
                 raise ValueError('lng must be a valid FinnaLanguage')
             payload['lng'] = lng.value
+        if other is not None:
+            payload.update(other)
         
         req = requests.get(self.api_base + 'search', params=payload)
         req.raise_for_status()
